@@ -1,0 +1,33 @@
+<%= form_for(@daily_question) do |f| %>
+  <% if @daily_question.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@daily_question.errors.count, "error") %> prohibited this daily_question from being saved:</h2>
+
+      <ul>
+      <% @daily_question.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :question %><br>
+    <%= f.text_field :question %>
+  </div>
+  <div class="field">
+    <%= f.label :response %><br>
+    <%= f.text_field :response %>
+  </div>
+  <div class="field">
+    <%= f.label :user %><br>
+    <%= f.text_field :user %>
+  </div>
+  <div class="field">
+    <%= f.label :answered %><br>
+    <%= f.check_box :answered %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

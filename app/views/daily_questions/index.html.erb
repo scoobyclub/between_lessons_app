@@ -1,0 +1,33 @@
+<h1>Listing daily_questions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Response</th>
+      <th>User</th>
+      <th>Answered</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @daily_questions.each do |daily_question| %>
+      <tr>
+        <td><%= daily_question.question %></td>
+        <td><%= daily_question.response %></td>
+        <td><%= daily_question.user %></td>
+        <td><%= daily_question.answered %></td>
+        <td><%= link_to 'Show', daily_question %></td>
+        <td><%= link_to 'Edit', edit_daily_question_path(daily_question) %></td>
+        <td><%= link_to 'Destroy', daily_question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Daily question', new_daily_question_path %>

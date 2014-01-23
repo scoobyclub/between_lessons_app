@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @daily_question.question %>
+</p>
+
+<p>
+  <strong>Response:</strong>
+  <%= @daily_question.response %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @daily_question.user %>
+</p>
+
+<p>
+  <strong>Answered:</strong>
+  <%= @daily_question.answered %>
+</p>
+
+<%= link_to 'Edit', edit_daily_question_path(@daily_question) %> |
+<%= link_to 'Back', daily_questions_path %>

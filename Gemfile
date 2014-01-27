@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
-#ruby-gemset=railstutorial_rails_4_0
+#ruby-gemset=between-lessons
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
@@ -12,6 +12,11 @@ group :development, :test do
   gem 'binding_of_caller'
   # Use mysql as the database for Active Record
   gem 'mysql2'
+
+  gem 'guard-rspec', '2.5.0'
+  gem 'spork-rails', '4.0.0'
+  gem 'guard-spork', '1.5.0'
+  gem 'childprocess', '0.3.6'
 end
 
 group :test do
@@ -29,6 +34,7 @@ gem 'jbuilder', '1.0.2'
 # my additions
 
 gem 'devise'
+gem 'bootstrap-sass', '2.3.2.0'
 
 group :doc do
   gem 'sdoc', '0.3.20', require: false
